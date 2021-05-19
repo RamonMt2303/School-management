@@ -76,7 +76,7 @@ void Alumno::mostrar(){
     Persona::mostrar();
     cout << "La carrera que está estudiando es: " << carrera << endl;
     cout << "Lleva un promedio de la carrera de: " << promedio << endl;
-    cout << "Actualmente cursa:" << nivelEstudio << " semestre " << endl;
+    cout << "Actualmente cursa: " << nivelEstudio << " semestre " << endl;
 }
 
 class Profesor : public Persona{
