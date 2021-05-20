@@ -99,7 +99,8 @@ public:
                         cin >> celular;
                         total[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
                         Profesores[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
-                        cout << "Ingrese 1 para añadir un nuevo profesor a la lista de profesores, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+                        cout << "Ingrese 1 para añadir un nuevo profesor a la lista de profesores, \
+                        y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
                         cin >> registrarProfesor;
                     }
                 }
