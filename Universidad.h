@@ -39,7 +39,8 @@ public:
         cin >> confirmacion;
         if (confirmacion == 1){
             int registrarAlumno;
-            cout << "Ingrese 1 para añadir un nuevo alumno a la lista de alumnos, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+            cout << "Ingrese 1 para añadir un nuevo alumno a la lista de alumnos, \
+            y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
             cin >> registrarAlumno;
             Persona *Alumnos[registrarAlumno];
             while(registrarAlumno != 0){
@@ -61,14 +62,16 @@ public:
                     cin >> nivelEstudio;
                     total[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
                     Alumnos[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
-                    cout << "Ingrese 1 para añadir un nuevo alumno a la lista de alumnos, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+                    cout << "Ingrese 1 para añadir un nuevo alumno a la lista de alumnos, \
+                    y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
                     cin >> registrarAlumno;
                 }
             }
         }
             else if (confirmacion == 2){
                 int registrarProfesor;
-                cout << "Ingrese 1 para añadir un nuevo profesor a la lista de profesores, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+                cout << "Ingrese 1 para añadir un nuevo profesor a la lista de profesores, \
+                y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
                 cin >> registrarProfesor;
                 Persona *Profesores[registrarProfesor];
                 while(registrarProfesor != 0){
@@ -103,7 +106,8 @@ public:
             }
             else if (confirmacion == 3){
                 int registrarLimpieza;
-                cout << "Ingrese 1 para añadir un nuevo personal de limpieza a la lista de limpieza, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+                cout << "Ingrese 1 para añadir un nuevo personal de limpieza a la lista de limpieza, \
+                y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
                 cin >> registrarLimpieza;
                 Persona *personalLimpieza[registrarLimpieza];
                 while(registrarLimpieza != 0){
@@ -131,7 +135,8 @@ public:
                         cin >> celular;
                         total[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
                         personalLimpieza[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
-                        cout << "Ingrese 1 para añadir un nuevo profesor a la lista de limpieza, y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
+                        cout << "Ingrese 1 para añadir un nuevo profesor a la lista de limpieza, \
+                        y a la lista general de la universidad o 0 para salir y acceder a otro grupo" << endl;
                         cin >> registrarLimpieza;
                     }
                 }
