@@ -44,9 +44,9 @@ class Alumno : public Persona{
 private:
     string carrera;
     float promedio;
-    int nivelEstudio;
+    string nivelEstudio;
 public:
-    Alumno(string nombre, int edad, string carrera, float promedio, int nivelEstudio):Persona(nombre, edad){
+    Alumno(string nombre, int edad, string carrera, float promedio, string nivelEstudio):Persona(nombre, edad){
         this -> carrera = carrera;
         this -> promedio = promedio;
         this -> nivelEstudio = nivelEstudio;
@@ -57,7 +57,7 @@ public:
     float getPromedio(){
         return this -> promedio;
     }
-    int getNivelEstudio(){
+    string getNivelEstudio(){
         return this -> nivelEstudio;
     }
     void setCarrera(string _carrera){
@@ -66,7 +66,7 @@ public:
     void setPromedio(float _promedio){
         this -> promedio = _promedio;
     }
-    void setNivelEstudio(int _nivelEstudio){
+    void setNivelEstudio(string _nivelEstudio){
         this -> nivelEstudio = _nivelEstudio;
     }
     void mostrar();
