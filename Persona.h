@@ -9,21 +9,33 @@
 #define Persona_h
 #include <iostream>
 using namespace std;
-
+/*
+* Defino mi clase Persona, como clase abstracta, ya que de ella se derivan los 3 tipos de persons que conforman a la escuela.
+*/
 class Persona{
 private:
     string nombre;
     int edad;
 public:
+    /*
+     * Inicio el constructor de la clase abstracta.
+     */
     Persona(string nombre, int edad){
         this -> edad = edad;
         this -> nombre = nombre;
     }
     virtual void mostrar();
-    
+    /*
+     * La función getNombre, nos regresa el nombre de la persona.
+     * @return nombre Nombre de la persona.
+     */
     string getNombre(){
         return this -> nombre;
     }
+    /*
+     * La función getEdad, nos regresa la edad de la persona.
+     * @return edad Edad de la persona.
+     */
     int getEdad(){
         return this -> edad;
     }
