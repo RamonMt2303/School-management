@@ -212,137 +212,90 @@ public:
      * La función llenarDatosRegistro, sirve para hacer el registro de personal en la escuela, como alumnos, profesores y personal de limpieza, por medio de apuntadores.
      */
     void llenarDatosRegistro(){
+        int registrar;
         int confirmacion;
-        cout << "¿A qué grupo quiere acceder para hacer un registro?" << endl;
-        cout << "1 para Alumnos, 2 para Profesores y 3 para Personal de Limpieza o 4 para terminar el registro" << endl;
-        cin >> confirmacion;
-        while (confirmacion != 4){
+        cout<<"¿Cuántas personas quiere registrar?"<<endl;
+        cin>>registrar;
+        Persona *Capacidad[registrar];
+        for (int i=0;i<registrar;i++){
+            cout << "¿A qué grupo quiere acceder para hacer un registro?" << endl;
+            cout << "1 para Alumnos, 2 para Profesores y 3 para Personal de Limpieza" << endl;
+            cin >> confirmacion;
             if (confirmacion == 1){
-                int registroAlumno;
-                int confirmacionImpresion;
-                cout << "¿Cuántos Alumnos desea registrar?" << endl;
-                cin >> registroAlumno;
-                Persona *ListadoAlumnos[registroAlumno];
-                for (int i=0;i<registroAlumno;i++){
-                    string nombre;
-                    int edad;
-                    string carrera;
-                    float promedio;
-                    string nivelEstudio;
-                    cout << "¿Cuál es el nombre del estudiante?" << endl;
-                    cin >> nombre;
-                    cout << "¿Cuál es su edad?" << endl;
-                    cin >> edad;
-                    cout << "¿Qué carrera está estudiando?" << endl;
-                    cin >> carrera;
-                    cout << "¿Qué promedio lleva acumulado en toda la carrera?" << endl;
-                    cin >> promedio;
-                    cout << "¿En qué semestre está actualmente?" << endl;
-                    cin.ignore();
-                    getline(cin, nivelEstudio);
-                    ListadoAlumnos[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
-                }
-                    cout << "¿Desea imprimir la lista de los Estudiantes?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
-                    cin >> confirmacionImpresion;
-                    if (confirmacionImpresion == 1){
-                        for (int i = 0; i<registroAlumno;i++){
-                            ListadoAlumnos[i]->mostrar();
-                            cout << "\n" << endl;
-                                        }
-                    }else{
-                        cout << "Cancelando impresión del personal" << endl;
-                        }
-                cout << "¿A qué grupo quiere acceder para hacer un registro?" << endl;
-                cout << "1 para Alumnos, 2 para Profesores y 3 para Personal de Limpieza o 4 para terminar el registro" << endl;
-                cin >> confirmacion;
+                string nombre;
+                int edad;
+                string carrera;
+                float promedio;
+                string nivelEstudio;
+                cout << "¿Cuál es el nombre del estudiante?" << endl;
+                cin >> nombre;
+                cout << "¿Cuál es su edad?" << endl;
+                cin >> edad;
+                cout << "¿Qué carrera está estudiando?" << endl;
+                cin >> carrera;
+                cout << "¿Qué promedio lleva acumulado en toda la carrera?" << endl;
+                cin >> promedio;
+                cout << "¿En qué semestre está actualmente?" << endl;
+                cin.ignore();
+                getline(cin, nivelEstudio);
+                Capacidad[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
                 }
             else if (confirmacion == 2){
-                int registrarProfesor;
-                int confirmacionImpresion;
-                cout << "¿Cuántos profesores desea registrar?" << endl;
-                cin >> registrarProfesor;
-                Persona *ListadoProfesores[registrarProfesor];
-                for (int i=0;i<registrarProfesor;i++){
-                    string nombre;
-                    int edad;
-                    string materia;
-                    float salario;
-                    int grupos;
-                    string especialidad;
-                    string celular;
-                    cout << "¿Cuál es el nombre del profesor?" << endl;
-                    cin >> nombre;
-                    cout << "¿Cuál es su edad?" << endl;
-                    cin >> edad;
-                    cout << "¿Qué materia se encarga de impartir?" << endl;
-                    cin >> materia;
-                    cout << "¿Cuál es su salario?" << endl;
-                    cin >> salario;
-                    cout << "¿De cuántos grupos se encarga de dar clase?" << endl;
-                    cin >> grupos;
-                    cout << "¿En qué área se especializó?" << endl;
-                    cin >> especialidad;
-                    cout << "¿Cuál es su número telefónico?" << endl;
-                    cin >> celular;
-                    ListadoProfesores[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
-                }
-                    cout << "¿Desea imprimir la lista solo de los Profesores?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
-                    cin >> confirmacionImpresion;
-                    if (confirmacionImpresion == 1){
-                        for (int i = 0; i<registrarProfesor;i++){
-                            ListadoProfesores[i]->mostrar();
-                            cout << "\n" << endl;
-                                            }
-                    }else{
-                        cout << "Cancelando impresión del personal" << endl;
-                    }
-                cout << "¿A qué grupo quiere acceder para hacer un registro?" << endl;
-                cout << "1 para Alumnos, 2 para Profesores y 3 para Personal de Limpieza o 4 para terminar el registro" << endl;
-                cin >> confirmacion;
+                string nombre;
+                int edad;
+                string materia;
+                float salario;
+                int grupos;
+                string especialidad;
+                string celular;
+                cout << "¿Cuál es el nombre del profesor?" << endl;
+                cin >> nombre;
+                cout << "¿Cuál es su edad?" << endl;
+                cin >> edad;
+                cout << "¿Qué materia se encarga de impartir?" << endl;
+                cin >> materia;
+                cout << "¿Cuál es su salario?" << endl;
+                cin >> salario;
+                cout << "¿De cuántos grupos se encarga de dar clase?" << endl;
+                cin >> grupos;
+                cout << "¿En qué área se especializó?" << endl;
+                cin >> especialidad;
+                cout << "¿Cuál es su número telefónico?" << endl;
+                cin >> celular;
+                Capacidad[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
                 }
             else if (confirmacion == 3){
-                int registrarLimpieza;
-                int confirmacionImpresion;
-                cout << "¿Cuánto personal de Limpieza desea registrar?" << endl;
-                cin >> registrarLimpieza;
-                Persona *ListadoLimpieza[registrarLimpieza];
-                for (int i=0;i<registrarLimpieza;i++){
-                    string nombre;
-                    int edad;
-                    string actividades;
-                    float salario;
-                    int salones;
-                    string celular;
-                    string estudios;
-                    cout << "¿Cuál es el nombre del encargado de limpieza?" << endl;
-                    cin >> nombre;
-                    cout << "¿Cuál es su edad?" << endl;
-                    cin >> edad;
-                    cout << "¿Qué actividad se encarga de realiza?" << endl;
-                    cin.ignore();
-                    getline(cin, actividades);
-                    cout << "¿Cuál es su salario?" << endl;
-                    cin >> salario;
-                    cout << "¿Cuántos salones se encarga de limpiar?" << endl;
-                    cin >> salones;
-                    cout << "¿Qué nivel de estudios tiene? (Secundaria, Preparatoria, etc)" << endl;
-                    cin >> estudios;
-                    cout << "¿Cuál es su número telefónico?" << endl;
-                    cin >> celular;
-                    ListadoLimpieza[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
-                }
-                    cout << "¿Desea imprimir la lista solo de los empleados del área de limpieza?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
-                    cin >> confirmacionImpresion;
-                    if (confirmacionImpresion == 1){
-                        for (int i = 0; i<registrarLimpieza;i++){
-                            ListadoLimpieza[i]->mostrar();
-                            cout << "\n" << endl;
-                                    }
-                    }else{
-                            cout << "Cancelando impresión del personal" << endl;
-                                }
+                string nombre;
+                int edad;
+                string actividades;
+                float salario;
+                int salones;
+                string celular;
+                string estudios;
+                cout << "¿Cuál es el nombre del encargado de limpieza?" << endl;
+                cin >> nombre;
+                cout << "¿Cuál es su edad?" << endl;
+                cin >> edad;
+                cout << "¿Qué actividad se encarga de realiza?" << endl;
+                cin.ignore();
+                getline(cin, actividades);
+                cout << "¿Cuál es su salario?" << endl;
+                cin >> salario;
+                cout << "¿Cuántos salones se encarga de limpiar?" << endl;
+                cin >> salones;
+                cout << "¿Qué nivel de estudios tiene? (Secundaria, Preparatoria, etc)" << endl;
+                cin >> estudios;
+                cout << "¿Cuál es su número telefónico?" << endl;
+                cin.ignore();
+                getline(cin,celular);
+                Capacidad[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
                             }
                         }
+            for (int i = 0; i<registrar;i++){
+                Capacidad[i]->mostrar();
+                cout << "\n" << endl;
+                        }
+        
     }
 };
 #endif /* Universidad_h */
