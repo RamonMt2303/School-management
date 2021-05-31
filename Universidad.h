@@ -222,7 +222,7 @@ public:
                 int confirmacionImpresion;
                 cout << "¿Cuántos Alumnos desea registrar?" << endl;
                 cin >> registroAlumno;
-                Persona *Alumnos[registroAlumno];
+                Persona *ListadoAlumnos[registroAlumno];
                 for (int i=0;i<registroAlumno;i++){
                     string nombre;
                     int edad;
@@ -240,13 +240,13 @@ public:
                     cout << "¿En qué semestre está actualmente?" << endl;
                     cin.ignore();
                     getline(cin, nivelEstudio);
-                    Alumnos[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
+                    ListadoAlumnos[i] = new Alumno(nombre, edad, carrera, promedio, nivelEstudio);
                 }
                     cout << "¿Desea imprimir la lista de los Estudiantes?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
                     cin >> confirmacionImpresion;
                     if (confirmacionImpresion == 1){
                         for (int i = 0; i<registroAlumno;i++){
-                            Alumnos[i]->mostrar();
+                            ListadoAlumnos[i]->mostrar();
                             cout << "\n" << endl;
                                         }
                     }else{
@@ -261,7 +261,7 @@ public:
                 int confirmacionImpresion;
                 cout << "¿Cuántos profesores desea registrar?" << endl;
                 cin >> registrarProfesor;
-                Persona *Profesores[registrarProfesor];
+                Persona *ListadoProfesores[registrarProfesor];
                 for (int i=0;i<registrarProfesor;i++){
                     string nombre;
                     int edad;
@@ -284,13 +284,13 @@ public:
                     cin >> especialidad;
                     cout << "¿Cuál es su número telefónico?" << endl;
                     cin >> celular;
-                    Profesores[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
+                    ListadoProfesores[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
                 }
                     cout << "¿Desea imprimir la lista solo de los Profesores?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
                     cin >> confirmacionImpresion;
                     if (confirmacionImpresion == 1){
                         for (int i = 0; i<registrarProfesor;i++){
-                            Profesores[i]->mostrar();
+                            ListadoProfesores[i]->mostrar();
                             cout << "\n" << endl;
                                             }
                     }else{
@@ -305,7 +305,7 @@ public:
                 int confirmacionImpresion;
                 cout << "¿Cuánto personal de Limpieza desea registrar?" << endl;
                 cin >> registrarLimpieza;
-                Persona *personalLimpieza[registrarLimpieza];
+                Persona *ListadoLimpieza[registrarLimpieza];
                 for (int i=0;i<registrarLimpieza;i++){
                     string nombre;
                     int edad;
@@ -329,13 +329,13 @@ public:
                     cin >> estudios;
                     cout << "¿Cuál es su número telefónico?" << endl;
                     cin >> celular;
-                    personalLimpieza[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
+                    ListadoLimpieza[i] = new Limpieza(nombre, edad, actividades, salario, salones, celular, estudios);
                 }
                     cout << "¿Desea imprimir la lista solo de los empleados del área de limpieza?, Ingrese 1 para si, o 0 para no hacerlo" << endl;
                     cin >> confirmacionImpresion;
                     if (confirmacionImpresion == 1){
                         for (int i = 0; i<registrarLimpieza;i++){
-                            personalLimpieza[i]->mostrar();
+                            ListadoLimpieza[i]->mostrar();
                             cout << "\n" << endl;
                                     }
                     }else{
