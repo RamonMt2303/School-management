@@ -209,7 +209,8 @@ public:
     }
     
     /*
-     * La función llenarDatosRegistro, sirve para hacer el registro de personal en la escuela, como alumnos, profesores y personal de limpieza, por medio de apuntadores.
+     * La función llenarDatosRegistro, sirve para hacer el registro de personal en la escuela,
+     * como alumnos, profesores y personal de limpieza, por medio de apuntadores.
      */
     void llenarDatosRegistro(){
         int registrar;
