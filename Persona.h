@@ -13,7 +13,7 @@ using namespace std;
 * Defino mi clase Persona, como clase abstracta, ya que de ella se derivan los 3 tipos de persons que conforman a la escuela.
 */
 class Persona{
-private:
+protected:
     string nombre;
     int edad;
 public:
@@ -24,7 +24,7 @@ public:
         this -> edad = edad;
         this -> nombre = nombre;
     }
-    virtual void mostrar();
+    virtual void mostrar() = 0;
     /*
      * La función getNombre, nos regresa el nombre de la persona.
      * @return nombre Nombre de la persona.
@@ -47,10 +47,6 @@ public:
     }
 };
 
-void Persona::mostrar(){
-    cout << "Su nombre es: " << nombre << endl;
-    cout << "Su edad: " << edad << endl;
-}
 
 class Alumno : public Persona{
 private:
@@ -85,7 +81,8 @@ public:
 };
 
 void Alumno::mostrar(){
-    Persona::mostrar();
+    cout << "Su nombre es: " << nombre << endl;
+    cout << "Su edad es: " << edad << endl;
     cout << "La carrera que está estudiando es: " << carrera << endl;
     cout << "Lleva un promedio de la carrera de: " << promedio << endl;
     cout << "Actualmente cursa: " << nivelEstudio << " semestre " << endl;
@@ -140,7 +137,8 @@ public:
 };
 
 void Profesor::mostrar(){
-    Persona::mostrar();
+    cout << "Su nombre es: " << nombre << endl;
+    cout << "Su edad es: " << edad << endl;
     cout << "La materia que imparte es: " << materia << endl;
     cout << "Su salario es: " << salario << endl;
     cout << "Es encargado de:" << grupos << " grupos " << endl;
@@ -198,7 +196,8 @@ public:
 };
 
 void Limpieza::mostrar(){
-    Persona::mostrar();
+    cout << "Su nombre es: " << nombre << endl;
+    cout << "Su edad es: " << edad << endl;
     cout << "Las actividades que realiza son: " << actividades << endl;
     cout << "Su salario es: " << salario << endl;
     cout << "Es encargado de limpiar:" << salones << " salones por dia " << endl;

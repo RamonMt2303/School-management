@@ -259,9 +259,11 @@ public:
                 cout << "¿De cuántos grupos se encarga de dar clase?" << endl;
                 cin >> grupos;
                 cout << "¿En qué área se especializó?" << endl;
-                cin >> especialidad;
+                cin.ignore();
+                getline(cin,especialidad);
                 cout << "¿Cuál es su número telefónico?" << endl;
-                cin >> celular;
+                cin.ignore();
+                getline(cin,celular);
                 Capacidad[i] = new Profesor(nombre, edad, materia, salario, grupos, especialidad, celular);
                 }
             else if (confirmacion == 3){
