@@ -10,8 +10,9 @@
 #include <iostream>
 using namespace std;
 /*
-* Defino mi clase Persona, como clase abstracta, ya que de ella se derivan los 3 tipos de persons que conforman a la escuela.
-*/
+ * Defino mi clase Persona, como clase abstracta, ya que de ella se derivan
+ * los 3 tipos de persons que conforman a la escuela.
+ */
 class Persona{
 private:
     string nombre;
@@ -26,10 +27,13 @@ public:
     }
     virtual void mostrar() = 0;
     /*
+     * Declaramos los getters y setters como protegidos, ya que la clase Persona es abstracta
+     */
+protected:
+    /*
      * La función getNombre, nos regresa el nombre de la persona.
      * @return nombre Nombre de la persona.
      */
-protected:
     string getNombre(){
         return this -> nombre;
     }
@@ -40,40 +44,78 @@ protected:
     int getEdad(){
         return this -> edad;
     }
+    /*
+     * La función setNombre, nos ayuda a asignar el nombre de la persona.
+     * @param nombre Nombre de la persona a registrar.
+     */
     void setNombre(string _nombre){
         this -> nombre = _nombre;
     }
+    /*
+     * La función setEdad, nos ayuda a asignar la edad de la persona.
+     * @param edad Edad de la persona a registrar.
+     */
     void setEdad(int _edad){
         this -> edad = _edad;
     }
 };
 
+/*
+ * Defino mi clase Alumno, como clase hija se Persona.
+ */
 class Alumno : public Persona{
 private:
     string carrera;
     float promedio;
     string nivelEstudio;
 public:
+    /*
+     * Inicio el constructor de la clase.
+     */
     Alumno(string nombre, int edad, string carrera, float promedio, string nivelEstudio):Persona(nombre, edad){
         this -> carrera = carrera;
         this -> promedio = promedio;
         this -> nivelEstudio = nivelEstudio;
     }
+    /*
+     * La función getCarrera, nos regresa la carrera que está cursando el alumno o alumna.
+     * @return carrera Carrera que cursa el o alumno o alumna.
+     */
     string getCarrera(){
         return this -> carrera;
     }
+    /*
+     * La función getPromedio, nos regresa el promedio acumulado del alumno o alumna en la carrera.
+     * @return promedio Promedio total acumulado en la carrera.
+     */
     float getPromedio(){
         return this -> promedio;
     }
+    /*
+     * La función getNivelEstudio, nos regresa el semestre que está cursando el alumno o alumna.
+     * @return nivelEstudio Semestre que cursa el o alumno o alumna.
+     */
     string getNivelEstudio(){
         return this -> nivelEstudio;
     }
+    /*
+     * La función setCarrera, nos ayuda a asignar la carrera que están cursando.
+     * @param carrera Carrera universitaria que están cursando.
+     */
     void setCarrera(string _carrera){
         this -> carrera = _carrera;
     }
+    /*
+     * La función setPromedio, nos ayuda a asignar el promedio del estudiante.
+     * @param promedio Promedio general acumulado en la carrera.
+     */
     void setPromedio(float _promedio){
         this -> promedio = _promedio;
     }
+    /*
+     * La función setNivelEstudio, nos ayuda a asignar el semestre que está cursando el estudiante.
+     * @param nivelEstudio Semestre que está cursando el estudiante.
+     */
     void setNivelEstudio(string _nivelEstudio){
         this -> nivelEstudio = _nivelEstudio;
     }
