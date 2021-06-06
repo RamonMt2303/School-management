@@ -12,8 +12,8 @@
 using namespace std;
 int main() {
     Universidad Universidad;
-    //Universidad.llenarDatosEscuela();
-    //Universidad.imprimirDatosEscuela();
+    Universidad.llenarDatosEscuela();
+    Universidad.imprimirDatosEscuela();
     Universidad.llenarDatosRegistro();
     return 0;
 }
