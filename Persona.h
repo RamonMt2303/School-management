@@ -122,6 +122,9 @@ public:
     void mostrar();
 };
 
+/*
+ * Inicializo la función de mostrar, para mostrar los atributos del alumno, y los de la clase abstracta.
+ */
 void Alumno::mostrar(){
     cout << "Su nombre es: " << getNombre() << endl;
     cout << "Su edad es: " << getEdad() << endl;
@@ -130,6 +133,9 @@ void Alumno::mostrar(){
     cout << "Actualmente cursa: " << nivelEstudio << " semestre " << endl;
 }
 
+/*
+ * Defino mi clase Profesor, como clase hija se Persona.
+ */
 class Profesor : public Persona{
 private:
     string materia;
@@ -138,6 +144,9 @@ private:
     string especialidad;
     string celular;
 public:
+    /*
+     * Inicio el constructor de la clase.
+     */
     Profesor(string nombre, int edad, string materia, float salario, int grupos, string especialidad, string celular):Persona(nombre, edad){
         this -> materia = materia;
         this -> salario = salario;
@@ -145,39 +154,82 @@ public:
         this -> especialidad = especialidad;
         this -> celular = celular;
     }
+    /*
+     * La función getMateria, nos regresa la materia que imparte el profesor.
+     * @return materia Materia impartida por el profesor.
+     */
     string getMateria(){
         return this -> materia;
     }
+    /*
+     * La función getSalario, nos regresa el salario del profesor.
+     * @return salario Salario del profesor.
+     */
     float getSalario(){
         return this -> salario;
     }
+    /*
+     * La función getGrupos, nos regresa el número de grupos que imparte clases el profesor.
+     * @return grupos Grupos que se encarga de dar clase el profesor.
+     */
     int getGrupos(){
         return this -> grupos;
     }
+    /*
+     * La función getEspecialidad, nos regresa la especialidad profesional que tiene el profesor.
+     * @return especialidad Especialidad profesional del profesor.
+     */
     string getEspecialidad(){
         return this -> especialidad;
     }
+    /*
+     * La función getCelular, nos regresa el número telefónico del profesor.
+     * @return celular Número telefónico del profesor.
+     */
     string getCelular(){
         return this -> celular;
     }
+    /*
+     * La función setMateria, nos ayuda a asignar la materia que imparte el profesor.
+     * @param materia Materia que imparte el profesor.
+     */
     void setMateria(string _materia){
         this -> materia = _materia;
     }
+    /*
+     * La función setSalario, nos ayuda a asignar el salario del profesor.
+     * @param salario Salario del profesor.
+     */
     void setSalario(float _salario){
         this -> salario = _salario;
     }
+    /*
+     * La función setGrupos, nos ayuda a asignar el número de grupos que imparte clases el profesor.
+     * @param grupos Grupos que se encarga de dar clase el profesor.
+     */
     void setGrupos(int _grupos){
         this -> grupos = _grupos;
     }
+    /*
+     * La función setEspecialidad, nos ayuda a asignar la especialidad profesional que tiene el profesor.
+     * @param especialidad Especialidad profesional del profesor.
+     */
     void setEspecialidad(string _especialidad){
         this -> especialidad = _especialidad;
     }
+    /*
+     * La función setCelular, nos ayuda a asignar el número celular del profesor.
+     * @param celular Número telefónico del profesor.
+     */
     void setCelular(string _celular){
         this -> celular = _celular;
     }
     void mostrar();
 };
-
+/*
+ * Inicializo la función de mostrar, para mostrar los atributos del profesor,
+ * y los de la clase abstracta.
+ */
 void Profesor::mostrar(){
     cout << "Su nombre es: " << getNombre() << endl;
     cout << "Su edad es: " << getEdad() << endl;
@@ -187,7 +239,9 @@ void Profesor::mostrar(){
     cout << "Tiene una especialidad en: " << especialidad << endl;
     cout << "Su número de celular es: " << celular << endl;
 }
-
+/*
+ * Defino mi clase Limpieza, como clase hija se Persona.
+ */
 class Limpieza : public Persona{
 private:
     string actividades;
@@ -196,6 +250,9 @@ private:
     string celular;
     string estudios;
 public:
+    /*
+     * Inicio el constructor de la clase.
+     */
     Limpieza(string nombre, int edad, string actividades, float salario, int salones,
              string estudios, string celular):Persona(nombre, edad){
         this -> actividades = actividades;
@@ -204,39 +261,84 @@ public:
         this -> estudios = estudios;
         this -> celular = celular;
     }
+    /*
+     * La función getActividades, nos regresa las actividades que se encarga de realizar
+     * el encargado de limpieza.
+     * @return actividades Actividades que se encarga de realizar el encargado de limpieza.
+     */
     string getActividades(){
         return this -> actividades;
     }
+    /*
+     * La función getSalario, nos regresa el salario del personal de limpieza.
+     * @return salario Salario del personal de limpieza.
+     */
     float getSalario(){
         return this -> salario;
     }
+    /*
+     * La función getSalones, nos regresa el número de salones que se encarga de limpiar.
+     * @return salones Número de salones que se encarga de limpiar.
+     */
     int getSalones(){
         return this -> salones;
     }
+    /*
+     * La función getEstudios, nos regresa el nivel de estudios que tienen los encargados.
+     * @return estudios Nivel de estudios que tienen los encargados.
+     */
     string getEstudios(){
         return this -> estudios;
     }
+    /*
+     * La función getCelular, nos regresa el número telefónico del personal de limpieza.
+     * @return celular Número telefónico del personal de limpieza.
+     */
     string getCelular(){
         return this -> celular;
     }
+    /*
+     * La función setActividades, nos ayuda a asignar las actividades que se encarga de realizar
+     * el encargado de limpieza.
+     * @param actividades Actividades que se encarga de realizar.
+     */
     void setActividades(string _actividades){
         this -> actividades = _actividades;
     }
+    /*
+     * La función setSalario, nos ayuda a asignar el salario del personal de limpieza.
+     * @param salario Salario del personal de limpieza.
+     */
     void setSalario(float _salario){
         this -> salario = _salario;
     }
+    /*
+     * La función setSalones, nos ayuda a asignar el número de salones que se encarga de limpiar.
+     * @param salones Salones que se encarga de limpiar.
+     */
     void setSalones(int _salones){
         this -> salones = _salones;
     }
+    /*
+     * La función setEstudios, nos ayuda a asignar el nivel de estudios que tiene el encargado.
+     * @param estudios Nivel de estudios que tiene el encargado.
+     */
     void setEstudios(string _estudios){
         this -> estudios = _estudios;
     }
+    /*
+     * La función setCelular, nos ayuda a asignar el número celular del personal de limpieza.
+     * @param celular Número telefónico del personal de limpieza.
+     */
     void setCelular(string _celular){
         this -> celular = _celular;
     }
     void mostrar();
 };
-
+/*
+ * Inicializo la función de mostrar, para mostrar los atributos del personal de limpieza,
+ * y los de la clase abstracta.
+ */
 void Limpieza::mostrar(){
     cout << "Su nombre es: " << getNombre() << endl;
     cout << "Su edad es: " << getEdad() << endl;
