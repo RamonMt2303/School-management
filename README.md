@@ -16,7 +16,4 @@ is involved in it.
 This program was elaborated using C++ standard, you can run without a problem in any operative system
 Download the archives with ".h" ending and the main program is called "main.cpp" and run it in the terminal.
 
-# Correcciones 
-En la parte de polimorfismo en el archivo de Universidad.h, se cambiaron las listas que habían para cada
-clase de Alumno, Profesor y Limpieza y se hizo una sola lista de las 3, para añadir una persona dependiendo
-la elección en la función para llenar los datos
+
